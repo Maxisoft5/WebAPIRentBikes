@@ -1,0 +1,67 @@
+        <h1>Awesome Bike Rental</h1>
+        <h4><img src="assets/images/smile1.png" width="30px" height="30px" alt="html5">Create new rent</h4>
+        <form novalidate autocomplete="off" class = "createForm flex flex-vertical-center" #form="ngForm">
+            <div class = "form-group">
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-sm">
+                            <label>Bike name</label>
+                            <input type="text" class="form-control form-control-lg" placeholder="Bike name" name="bikeName"
+                            [(ngModel)]="editedBike.name">
+                        </div>
+                        <div class="col-sm">
+                            <label>Bike type</label>    
+                            <select class="form-control types" id="types" name="rentType" #rentBikeType="ngModel" [(ngModel)]="editedBike.type" name="bikeType"> 
+                                <option value="Road">Road</option>
+                                <option value="Walking">Walking</option>
+                                <option value="Rock">Rock</option>
+                                <option value="Highway">Highway</option>
+                                <option value="Touring">Touring</option>
+                                <option value="Custom" selected>Custom</option>
+                            </select>
+                        </div>
+                        <div class="col-sm">
+                            <label>Rent price</label>
+                            <input type="text" class="form-control form-control-lg" placeholder="Rent price" name="rentCost" #rentCost="ngModel"
+                            [(ngModel)]="editedBike.rentCost">
+                        </div>
+                        <div class="col-sm">
+                            <input type="button" class="btn btn-success submitRent" form="data" [disabled]="form.invalid" (click)="addAvailableBike(form)" value="Submit rent">
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </form>
+         <form class = "rentForm flex flex-vertical-center">
+            <h4><img src="assets/images/smile2.png" width="30px" height="30px" alt="html5">Your rent (Total: ${{totalCost}})</h4>
+                <tbody>
+                    <tr *ngFor="let bike of rentBikes">
+                        <div class="bike form-group">
+                            <td>
+                                {{bike.name}} / {{bike.type}} / {{bike.rentCost}}
+                            </td>
+                            <td class = "submitBtn">
+                                 <button type="submit" class="btn btn-danger cancelBtn" (click)="cancelRentBike(bike.id)" form="data">Cancel Rent</button>
+                            </td>
+                        </div>
+                    </tr>
+                </tbody>
+        </form>
+        <form class = "availableForm flex flex-vertical-center">
+            <h4><img src="assets/images/smile3.png" width="30px" height="30px" alt="html5">Available bicycles ({{availableBikes.length}})</h4>
+                <tbody>
+                    <tr *ngFor="let bike of availableBikes">
+                        <div class="bike form-group">
+                            <td>
+                                {{bike.name}} / {{bike.type}} / {{bike.rentCost}}
+                            </td>
+                            <td>
+                                <input type="button" value="Rent" class="btn btn-primary rentBtn" (click)="setRentBike(bike.id)"/>
+                            </td>
+                            <td>
+                                <input type="button" value="Delete" (click)="deleteBike(bike.id)" class="btn btn-danger deleteBtn"/>
+                            </td>
+                        </div>
+                    </tr>
+                </tbody>
+        </form>

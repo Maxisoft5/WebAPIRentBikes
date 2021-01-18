@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: rgb(247, 246, 243);
+}
+
+ /*for invalid form controls*/
+ input.invalid {
+    border-color: rgb(161, 37, 37);
+  } 
