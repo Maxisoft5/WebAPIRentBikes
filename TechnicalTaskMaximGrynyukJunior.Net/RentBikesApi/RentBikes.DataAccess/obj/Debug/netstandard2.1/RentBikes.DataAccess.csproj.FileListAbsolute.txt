@@ -1,9 +1,0 @@
-C:\Users\Moksim\source\repos\RentBikes\RentBikes.DataAccess\bin\Debug\netstandard2.1\RentBikes.DataAccess.deps.json
-C:\Users\Moksim\source\repos\RentBikes\RentBikes.DataAccess\bin\Debug\netstandard2.1\RentBikes.DataAccess.dll
-C:\Users\Moksim\source\repos\RentBikes\RentBikes.DataAccess\bin\Debug\netstandard2.1\RentBikes.DataAccess.pdb
-C:\Users\Moksim\source\repos\RentBikes\RentBikes.DataAccess\obj\Debug\netstandard2.1\RentBikes.DataAccess.csprojAssemblyReference.cache
-C:\Users\Moksim\source\repos\RentBikes\RentBikes.DataAccess\obj\Debug\netstandard2.1\RentBikes.DataAccess.AssemblyInfoInputs.cache
-C:\Users\Moksim\source\repos\RentBikes\RentBikes.DataAccess\obj\Debug\netstandard2.1\RentBikes.DataAccess.AssemblyInfo.cs
-C:\Users\Moksim\source\repos\RentBikes\RentBikes.DataAccess\obj\Debug\netstandard2.1\RentBikes.DataAccess.csproj.CoreCompileInputs.cache
-C:\Users\Moksim\source\repos\RentBikes\RentBikes.DataAccess\obj\Debug\netstandard2.1\RentBikes.DataAccess.dll
-C:\Users\Moksim\source\repos\RentBikes\RentBikes.DataAccess\obj\Debug\netstandard2.1\RentBikes.DataAccess.pdb
