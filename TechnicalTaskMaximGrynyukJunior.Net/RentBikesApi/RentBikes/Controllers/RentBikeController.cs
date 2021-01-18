@@ -101,7 +101,7 @@ namespace RentBikes.Controllers
         }
 
         /// <summary>
-        /// Delete bike by id.
+        /// Update bike by id.
         /// </summary>
         /// <returns></returns>
         [HttpPut("{id}")]
