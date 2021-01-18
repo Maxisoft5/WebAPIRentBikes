@@ -5861,11 +5861,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Moksim\\source\\repos\\RentBikes\\RentBikes\\RentBikes.csproj",
+      "projectUniqueName": "C:\\Users\\Moksim\\Documents\\GitHub\\WebApiCrud\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\RentBikes.csproj",
       "projectName": "RentBikes",
-      "projectPath": "C:\\Users\\Moksim\\source\\repos\\RentBikes\\RentBikes\\RentBikes.csproj",
+      "projectPath": "C:\\Users\\Moksim\\Documents\\GitHub\\WebApiCrud\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\RentBikes.csproj",
       "packagesPath": "C:\\Users\\Moksim\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Moksim\\source\\repos\\RentBikes\\RentBikes\\obj\\",
+      "outputPath": "C:\\Users\\Moksim\\Documents\\GitHub\\WebApiCrud\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

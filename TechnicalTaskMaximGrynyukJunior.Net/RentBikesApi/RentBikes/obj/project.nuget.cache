@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qnbpSQhzfShJK5QKeYVAcD9vbGVa5UmR00ZPXUk+qB0xF3loeHr9pMtVIGlN/9U90OVR4oDTAnOft2m3/PG/Jg==",
+  "dgSpecHash": "XBTNzzMS99sd6seirSAJWYL8YfoEOy7MLfxBY9L8XEjrEm86wpM4phLXec9OVI/AYnbv/HUNjbPmwwuPjnUSXQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Moksim\\source\\repos\\RentBikes\\RentBikes\\RentBikes.csproj",
+  "projectFilePath": "C:\\Users\\Moksim\\Documents\\GitHub\\WebApiCrud\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\RentBikes.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Moksim\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Moksim\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\4.2.0\\microsoft.aspnetcore.mvc.versioning.4.2.0.nupkg.sha512",
