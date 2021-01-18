@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Moksim\\Documents\\GitHub\\WebApiCrud\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\RentBikes.csproj": {}
+    "c:\\Users\\Moksim\\Documents\\GitHub\\WebApiCrud\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\RentBikes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Moksim\\Documents\\GitHub\\WebApiCrud\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\RentBikes.csproj": {
+    "c:\\Users\\Moksim\\Documents\\GitHub\\WebApiCrud\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\RentBikes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Moksim\\Documents\\GitHub\\WebApiCrud\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\RentBikes.csproj",
+        "projectUniqueName": "c:\\Users\\Moksim\\Documents\\GitHub\\WebApiCrud\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\RentBikes.csproj",
         "projectName": "RentBikes",
-        "projectPath": "C:\\Users\\Moksim\\Documents\\GitHub\\WebApiCrud\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\RentBikes.csproj",
+        "projectPath": "c:\\Users\\Moksim\\Documents\\GitHub\\WebApiCrud\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\RentBikes.csproj",
         "packagesPath": "C:\\Users\\Moksim\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Moksim\\Documents\\GitHub\\WebApiCrud\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\obj\\",
+        "outputPath": "c:\\Users\\Moksim\\Documents\\GitHub\\WebApiCrud\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -67,6 +67,10 @@
             "NSwag.Annotations": {
               "target": "Package",
               "version": "[13.9.4, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[5.6.3, )"
             }
           },
           "imports": [

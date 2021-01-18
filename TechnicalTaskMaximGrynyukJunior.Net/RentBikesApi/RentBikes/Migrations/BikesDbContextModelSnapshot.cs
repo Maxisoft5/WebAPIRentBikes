@@ -42,8 +42,9 @@ namespace RentBikes.Migrations
                     b.Property<decimal>("RentCost")
                         .HasColumnType("decimal(18,0)");
 
-                    b.Property<byte>("Type")
-                        .HasColumnType("tinyint");
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(40)");
 
                     b.HasKey("Id");
 

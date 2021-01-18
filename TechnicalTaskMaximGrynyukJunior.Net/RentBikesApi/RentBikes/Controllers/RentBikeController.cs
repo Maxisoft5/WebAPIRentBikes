@@ -36,8 +36,6 @@ namespace RentBikes.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
-        [SwaggerResponse(HttpStatusCode.OK, typeof(Bike), IsNullable = false, Description = HttpStatusMessages.OkGet)]
-        [SwaggerResponse(HttpStatusCode.NotFound, typeof(void), IsNullable = false, Description = HttpStatusMessages.NotFound)]
         public async Task<IActionResult> Get(
              [FromRoute, Required] int id
             )
@@ -51,7 +49,6 @@ namespace RentBikes.Controllers
         /// <param name="model">Data.</param>
         /// <returns></returns>
         [HttpPost]
-        [SwaggerResponse(HttpStatusCode.Created, typeof(Bike), IsNullable = false, Description = HttpStatusMessages.Created)]
         public async Task<IActionResult> Create(
             [FromBody, Required] Bike bike
             )
@@ -69,7 +66,6 @@ namespace RentBikes.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("AvailableBikes")]
-        [SwaggerResponse(HttpStatusCode.OK, typeof(IList<Bike>), IsNullable = false, Description = HttpStatusMessages.OkList)]
         public async Task<IActionResult> GetAvailableBikes()
         {
             return OkOrNotFound(await BikeRepository.GetAvailableBikes());
@@ -80,7 +76,6 @@ namespace RentBikes.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("RentBikes")]
-        [SwaggerResponse(HttpStatusCode.OK, typeof(IList<Bike>), IsNullable = false, Description = HttpStatusMessages.OkList)]
         public async Task<IActionResult> GetRentBikes()
         {
             return OkOrNotFound(await BikeRepository.GetRentBikes());
@@ -91,13 +86,35 @@ namespace RentBikes.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpDelete("{id}")]
-        [SwaggerResponse(HttpStatusCode.OK, typeof(void), IsNullable = false, Description = HttpStatusMessages.OkAction)]
-        [SwaggerResponse(HttpStatusCode.NotFound, typeof(void), IsNullable = false, Description = HttpStatusMessages.NotFound)]
-        public async Task<IActionResult> Delete(
+        public async Task Delete(
              [FromRoute, Required] int id
             )
         {
-            return OkOrNotFound(await BikeRepository.Delete(id));
+            await BikeRepository.Delete(id);
+        }
+
+        /// <summary>
+        /// Set rent to the bike by id.
+        /// </summary>
+        /// <returns></returns>
+        [HttpPut("{id}")]
+        public async Task<IActionResult> SetRent(
+             [FromRoute, Required] int id
+            )
+        {
+            return OkOrNotFound(await BikeRepository.SetRent(id));
+        }
+
+        /// <summary>
+        /// Cancel rent to the bike by id.
+        /// </summary>
+        /// <returns></returns>
+        [HttpPut("{id}")]
+        public async Task<IActionResult> CancelRent(
+             [FromRoute, Required] int id
+            )
+        {
+            return OkOrNotFound(await BikeRepository.CancelRent(id));
         }
 
         /// <summary>
@@ -105,8 +122,6 @@ namespace RentBikes.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPut("{id}")]
-        [SwaggerResponse(HttpStatusCode.OK, typeof(Bike), IsNullable = false, Description = HttpStatusMessages.OkAction)]
-        [SwaggerResponse(HttpStatusCode.NotFound, typeof(void), IsNullable = false, Description = HttpStatusMessages.NotFound)]
         public async Task<IActionResult> UpdateRent(
              [FromRoute, Required] int id,
              [FromBody, Required] Bike model

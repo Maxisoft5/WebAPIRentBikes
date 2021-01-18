@@ -10,7 +10,7 @@ namespace RentBikes.DataAccess.Repositories.Interfaces
         Task<TEntity> Create(TEntity item);
         Task<List<TEntity>> GetItems();
         Task<TEntity> Get(int id);
-        Task<TEntity> Delete(int id);
+        Task Delete(int id);
         Task<TEntity> Update(TEntity item);
     }
 }

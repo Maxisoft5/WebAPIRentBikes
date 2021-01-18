@@ -5,7 +5,7 @@ using System.Text;
 namespace RentBikes.DataAccess.Models
 {
     /// <summary>
-    /// Bike's types.
+    /// Bike's types
     /// </summary>
     public enum BikeType
     {

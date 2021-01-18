@@ -23,8 +23,8 @@ namespace RentBikes.DataAccess.Models
         /// Type.
         /// </summary>
         [Required]
-        [Column(TypeName = "tinyint")]
-        public BikeType Type { get; set; }
+        [Column(TypeName = "nvarchar(40)")]
+        public string Type { get; set; }
 
         /// <summary>
         /// Rent cost.

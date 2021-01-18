@@ -63,12 +63,14 @@ namespace RentBikes.DataAccess.Repositories
         /// Creates a new bike.
         /// </summary>
         /// <param name="item"></param>
-        public async Task<Bike> Create(Bike item)
+        public async Task<Bike> Create(Bike bike)
         {
-           item.PublicId = Guid.NewGuid();
-           await Context.Bikes.AddAsync(item);
+           bike.PublicId = Guid.NewGuid();
+           bike.IsRent = true;
+           bike.IsAvailable = false;
+           await Context.Bikes.AddAsync(bike);
            await Context.SaveChangesAsync();
-           return await Get(item.Id);
+           return await Get(bike.Id);
         }
 
         /// <summary>
@@ -76,17 +78,53 @@ namespace RentBikes.DataAccess.Repositories
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public async Task<Bike> Delete(int id)
+        public async Task Delete(int id)
         {
-            var todoItem = await Get(id);
-
-            if (todoItem != null)
+            var bike = await Get(id);
+            if (bike != null)
             {
-                Context.Bikes.Remove(todoItem);
+                Context.Bikes.Remove(bike);
+                await Context.SaveChangesAsync();
+            }
+        }
+
+
+        /// <summary>
+        /// Set rent to the bike by id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public async Task<Bike> SetRent(int id)
+        {
+            var bike = await Get(id);
+
+            if (bike != null)
+            {
+                bike.IsRent = true;
+                bike.IsAvailable = false;
                 await Context.SaveChangesAsync();
             }
 
-            return todoItem;
+            return bike;
+        }
+
+        /// <summary>
+        /// Set rent to the bike by id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public async Task<Bike> CancelRent(int id)
+        {
+            var bike = await Get(id);
+
+            if (bike != null)
+            {
+                bike.IsRent = false;
+                bike.IsAvailable = true;
+                await Context.SaveChangesAsync();
+            }
+
+            return bike;
         }
 
         /// <summary>
