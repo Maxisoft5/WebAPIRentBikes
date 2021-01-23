@@ -1,0 +1,33 @@
+<h4><img src="assets/images/smile1.png" width="30px" height="30px" alt="html5">Create new rent</h4>
+<form novalidate autocomplete="off" class = "createForm flex flex-vertical-center" #form="ngForm">
+    <div class = "form-group">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-sm">
+                    <label>Bike name</label>
+                    <input type="text" class="form-control form-control-lg" placeholder="Bike name" name="bikeName"
+                    [(ngModel)]="service.editedBike.name">
+                </div>
+                <div class="col-sm">
+                    <label>Bike type</label>    
+                    <select class="form-control types" id="types" name="rentType" #rentBikeType="ngModel" [(ngModel)]="service.editedBike.type" name="bikeType"> 
+                        <option value="Road">Road</option>
+                        <option value="Walking">Walking</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Highway">Highway</option>
+                        <option value="Touring">Touring</option>
+                        <option value="Custom" selected>Custom</option>
+                    </select>
+                </div>
+                <div class="col-sm">
+                    <label>Rent price</label>
+                    <input type="text" class="form-control form-control-lg" placeholder="Rent price" name="rentCost" #rentCost="ngModel"
+                    [(ngModel)]="service.editedBike.rentCost">
+                </div>
+                <div class="col-sm">
+                    <input type="button" class="btn btn-success submitRent" form="data" [disabled]="form.invalid" (click)="addRentBike(form)" value="Submit rent">
+                </div>
+            </div>
+        </div>
+    </div>
+ </form>
