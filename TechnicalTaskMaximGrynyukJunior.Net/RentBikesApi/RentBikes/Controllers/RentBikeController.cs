@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using NSwag.Annotations;
@@ -44,21 +45,14 @@ namespace RentBikes.Controllers
         }
 
         /// <summary>
-        /// Creates a new entity.
+        /// Return a bike by id.
         /// </summary>
-        /// <param name="model">Data.</param>
+        /// <param name="id"></param>
         /// <returns></returns>
-        [HttpPost]
-        public async Task<IActionResult> Create(
-            [FromBody, Required] Bike bike
-            )
+        [HttpGet("Bikes")]
+        public async Task<IActionResult> GetAllBikes()
         {
-            if (bike == null)
-            {
-                return BadRequest();
-            }
-
-            return OkOrNotFound(await BikeRepository.Create(bike));
+            return OkOrNotFound(await BikeRepository.GetAllBikes());
         }
 
         /// <summary>
@@ -82,6 +76,24 @@ namespace RentBikes.Controllers
         }
 
         /// <summary>
+        /// Creates a new entity.
+        /// </summary>
+        /// <param name="model">Data.</param>
+        /// <returns></returns>
+        [HttpPost]
+        public async Task<IActionResult> Create(
+            [FromBody, Required] Bike bike
+            )
+        {
+            if (bike == null)
+            {
+                return BadRequest();
+            }
+
+            return OkOrNotFound(await BikeRepository.Create(bike));
+        }
+
+        /// <summary>
         /// Delete bike by id.
         /// </summary>
         /// <returns></returns>
@@ -97,7 +109,7 @@ namespace RentBikes.Controllers
         /// Set rent to the bike by id.
         /// </summary>
         /// <returns></returns>
-        [HttpPut("{id}")]
+        [HttpPut("{id}/SetRent")]
         public async Task<IActionResult> SetRent(
              [FromRoute, Required] int id
             )
@@ -109,7 +121,7 @@ namespace RentBikes.Controllers
         /// Cancel rent to the bike by id.
         /// </summary>
         /// <returns></returns>
-        [HttpPut("{id}")]
+        [HttpPut("{id}/CancelRent")]
         public async Task<IActionResult> CancelRent(
              [FromRoute, Required] int id
             )
@@ -118,7 +130,7 @@ namespace RentBikes.Controllers
         }
 
         /// <summary>
-        /// Update bike by id.
+        /// Updates bike by id.
         /// </summary>
         /// <returns></returns>
         [HttpPut("{id}")]

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Moksim\\Documents\\GitHub\\WebApiCrud\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\RentBikes.csproj": {}
+    "C:\\Users\\Moksim\\source\\repos\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\RentBikes.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Moksim\\Documents\\GitHub\\WebApiCrud\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\RentBikes.csproj": {
+    "C:\\Users\\Moksim\\source\\repos\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\RentBikes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Moksim\\Documents\\GitHub\\WebApiCrud\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\RentBikes.csproj",
+        "projectUniqueName": "C:\\Users\\Moksim\\source\\repos\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\RentBikes.csproj",
         "projectName": "RentBikes",
-        "projectPath": "c:\\Users\\Moksim\\Documents\\GitHub\\WebApiCrud\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\RentBikes.csproj",
+        "projectPath": "C:\\Users\\Moksim\\source\\repos\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\RentBikes.csproj",
         "packagesPath": "C:\\Users\\Moksim\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Moksim\\Documents\\GitHub\\WebApiCrud\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\obj\\",
+        "outputPath": "C:\\Users\\Moksim\\source\\repos\\TechnicalTaskMaximGrynyukJunior.Net\\RentBikesApi\\RentBikes\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -64,11 +64,27 @@
               "target": "Package",
               "version": "[5.0.1, )"
             },
+            "Microsoft.OpenApi": {
+              "target": "Package",
+              "version": "[1.2.3, )"
+            },
             "NSwag.Annotations": {
               "target": "Package",
               "version": "[13.9.4, )"
             },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
             "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
               "target": "Package",
               "version": "[5.6.3, )"
             }

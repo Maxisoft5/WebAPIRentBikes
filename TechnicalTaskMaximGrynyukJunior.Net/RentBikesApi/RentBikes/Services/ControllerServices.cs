@@ -29,7 +29,7 @@ namespace RentBikes.Services
 
 
         /// <summary>
-        ///Initializes a new instance of this type.
+        /// Initializes a new instance of this type.
         /// </summary>
         /// <param name="loggerFactory"></param>
         /// <param name="environment"></param>

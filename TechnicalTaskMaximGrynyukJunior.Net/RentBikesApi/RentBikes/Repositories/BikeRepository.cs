@@ -22,7 +22,7 @@ namespace RentBikes.DataAccess.Repositories
         /// Return all items.
         /// </summary>
         /// <returns></returns>
-        public async Task<List<Bike>> GetItems()
+        public async Task<List<Bike>> GetAllBikes()
         {
             return await Context.Bikes.ToListAsync();
         }
@@ -68,7 +68,7 @@ namespace RentBikes.DataAccess.Repositories
            bike.PublicId = Guid.NewGuid();
            bike.IsRent = true;
            bike.IsAvailable = false;
-           await Context.Bikes.AddAsync(bike);
+           await Context.Bikes.AddAsync(bike);  
            await Context.SaveChangesAsync();
            return await Get(bike.Id);
         }

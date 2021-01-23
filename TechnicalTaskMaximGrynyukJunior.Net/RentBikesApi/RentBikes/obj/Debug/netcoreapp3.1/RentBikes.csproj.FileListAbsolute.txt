@@ -132,3 +132,5 @@ c:\Users\Moksim\source\repos\TechnicalTaskMaximGrynyukJunior.Net\RentBikesApi\Re
 c:\Users\Moksim\source\repos\TechnicalTaskMaximGrynyukJunior.Net\RentBikesApi\RentBikes\obj\Debug\netcoreapp3.1\RentBikes.genruntimeconfig.cache
 c:\Users\Moksim\source\repos\TechnicalTaskMaximGrynyukJunior.Net\RentBikesApi\RentBikes\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
 c:\Users\Moksim\source\repos\TechnicalTaskMaximGrynyukJunior.Net\RentBikesApi\RentBikes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Moksim\source\repos\TechnicalTaskMaximGrynyukJunior.Net\RentBikesApi\RentBikes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Moksim\source\repos\TechnicalTaskMaximGrynyukJunior.Net\RentBikesApi\RentBikes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll

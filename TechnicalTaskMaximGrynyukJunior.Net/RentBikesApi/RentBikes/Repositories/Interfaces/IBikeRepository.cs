@@ -11,6 +11,7 @@ namespace RentBikes.DataAccess.Repositories.Interfaces
     {
         Task<List<Bike>> GetAvailableBikes();
         Task<List<Bike>> GetRentBikes();
+        Task<List<Bike>> GetAllBikes();
         Task<Bike> SetRent(int id);
         Task<Bike> CancelRent(int id);
     }
